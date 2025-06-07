@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomRatingBar" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorControlActivated">@color/rating_bar_color</item>
+    </style>
+
+    <style name="RoundedButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">16dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:insetLeft">4dp</item>
+        <item name="android:insetRight">4dp</item>
+        <item name="android:insetTop">8dp</item>
+        <item name="android:insetBottom">8dp</item>
+    </style>
+    <style name="WhiteUnderline" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/white</item>
+        <item name="hintTextColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+
+</resources>

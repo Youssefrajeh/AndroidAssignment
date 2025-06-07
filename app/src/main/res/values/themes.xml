@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme using Material Components -->
+    <style name="Base.Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your base theme here -->
+        <!-- <item name="colorPrimary">@color/my_primary</item> -->
+    </style>
+
+    <!-- App theme extending the base theme -->
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+
+</resources>

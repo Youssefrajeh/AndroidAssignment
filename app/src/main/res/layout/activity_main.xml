@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="60dp">
+
+
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/header_title"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/my_font"
+            />
+            <ImageView
+                android:id="@+id/bannerImage"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:src="@drawable/icon"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:scaleType="centerCrop"
+                 />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/movie_title_label"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/my_font"/>
+
+        <EditText
+            android:id="@+id/titleInput"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:minWidth="80dp"
+            android:inputType="text"
+            android:autofillHints="name"
+            android:hint="@string/movie_title_hint"
+            android:gravity="center"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/genre_label"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/my_font"/>
+
+        <EditText
+            android:id="@+id/directorInput"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:minWidth="80dp"
+            android:inputType="text"
+            android:autofillHints="name"
+            android:hint="@string/genre_hint"
+            android:textColorHint="@color/black"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rating_label"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/my_font"/>
+
+            <RatingBar
+                android:id="@+id/ratingInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1.0"
+                android:layout_marginTop="8dp"
+                android:theme="@style/CustomRatingBar"
+                />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+            <Button
+                style="@style/RoundedButton"
+                android:id="@+id/removeAllButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:minWidth="80dp"
+                android:maxWidth="120dp"
+                android:layout_weight="1"
+                android:text="@string/remove_all"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#C62828"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                style="@style/RoundedButton"
+                android:id="@+id/removeLastButton"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:minWidth="80dp"
+                android:maxWidth="120dp"
+                android:layout_weight="1"
+                android:text="@string/remove_last"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#EF6C00"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                style="@style/RoundedButton"
+                android:id="@+id/addButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:minWidth="80dp"
+                android:maxWidth="120dp"
+                android:layout_weight="1"
+                android:text="@string/add_rating"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2E7D32"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tracked_movies"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/my_font2"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>
+</FrameLayout>
